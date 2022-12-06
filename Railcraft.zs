@@ -42,7 +42,7 @@ recipes.remove(SteelTankGauge);
 recipes.remove(SteelTankValve);
 
 recipes.remove(CokeOvenBrick);
-//recipes.removeShapeless(<*>, [MinecartTank]);
+recipes.removeShapeless(Minecart, [MinecartTank]);
 recipes.remove(MinecartTank);
 
 
