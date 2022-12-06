@@ -1,6 +1,6 @@
 // importing mod option
 import mods.nei.NEI;
-import mods.forestry.Centrifuge;
+//import mods.forestry.Centrifuge;
 
 // importing stuff for latter use
     //forestry

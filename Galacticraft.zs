@@ -66,6 +66,7 @@ var OxygenDetector = <GalacticraftCore:tile.oxygenDetector>;
 var OxygenBubbleDistributor = <GalacticraftCore:tile.distributor>;
 var OxygenCollector = <GalacticraftCore:tile.oxygenCollector>;
 var OxygenSealer = <GalacticraftCore:tile.sealer>;
+var CompressIron = <ore:compressedIron>;
 
     //ImmersiveEngineering
 
@@ -167,8 +168,8 @@ recipes.addShaped(DisplayScreen,
     //FrequencyModule recipes
 recipes.addShaped(FrequencyModule,
 [[null, CompressedAluminium, null],
-[<ore:compressedIron>, Repeater, <ore:compressedIron>],
-[<minecraft:redstone>, T3Circuit, <minecraft:redstone>]]);
+[CompressIron, Repeater, CompressIron],
+[Redstone, T3Circuit, Redstone]]);
 
     //TelemetryUnit recipes
 recipes.addShaped(TelemetryUnit,

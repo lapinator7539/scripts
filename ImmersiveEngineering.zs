@@ -18,7 +18,7 @@ var netherbrick = <minecraft:netherbrick:0>;
 var IronSteel = <ore:ingotAnyIronSteel>;
 var CupronickelPlate = <ore:plateCupronickel>;
 var RedstoneDust = <ore:dustRedstone>;
-var Iron = <ore:ingotAnyIron>;
+var Iron = <ore:ingotAnyIronOrSteel>;
 
     //gregtech 6 
 var ElectricDynamo = <gregtech:gt.multitileentity:10111>;
