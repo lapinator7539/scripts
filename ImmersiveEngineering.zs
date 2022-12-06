@@ -49,11 +49,10 @@ recipes.remove(KineticDynamo);
     //Change Thermoelectric Generator to use GT6 materials.
 recipes.addShaped(ThermoelectricGenerator,
 [[IronSteel, IronSteel, IronSteel],
- [CupronickelPlate, ElectricDynamo, CupronickelPlate],
- [CupronickelPlate, CupronickelPlate, CupronickelPlate]]);
+[CupronickelPlate, ElectricDynamo, CupronickelPlate],
+[CupronickelPlate, CupronickelPlate, CupronickelPlate]]);
 
     //Change Kenetic Generator to use GT6 materials.
-
 recipes.addShaped(KineticDynamo, 
 [[RedstoneDust, ElectricDynamo, RedstoneDust],
 [Iron, Iron, Iron],
