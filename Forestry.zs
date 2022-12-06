@@ -1,6 +1,5 @@
 // importing mod option
 import mods.nei.NEI;
-//import mods.forestry.Centrifuge;
 
 // importing stuff for latter use
     //forestry
@@ -14,6 +13,12 @@ var Fermenter = <Forestry:factory:3>;
 var Squeezer = <Forestry:factory:5>;
 var Still = <Forestry:factory:6>;
 
+    //ore dict
+var GenericComb = <ore:beeComb>;
+var GenericPropolis = <ore:listAllpropolis>;
+
+    //computronic
+var ComputronicComb = <computronics:computronics.partsForestry>;
 
 // remove recipe
     //Remove higher tier RF generation
@@ -37,6 +42,12 @@ recipes.remove(Squeezer);
     //Remove Still as this functionality is handled by GT machines.
 recipes.remove(Still);
 
+    //remove all Centrifuge recipes 
+mods.forestry.Centrifuge.removeRecipe(GenericComb);
+mods.forestry.Centrifuge.removeRecipe(ComputronicComb);
+mods.forestry.Centrifuge.removeRecipe(GenericPropolis);
+
+
 //hide stuff from nei
 NEI.hide(PeatFiredEngine);
 NEI.hide(BioGasEngine);
@@ -46,7 +57,3 @@ NEI.hide(Centrifuge);
 NEI.hide(Fermenter);
 NEI.hide(Squeezer);
 NEI.hide(Still);
-
-
-//testing stuff
-//Centrifuge.removeRecipe(<*>);
