@@ -56,4 +56,4 @@ recipes.addShaped(ThermoelectricGenerator,
 recipes.addShaped(KineticDynamo, 
 [[RedstoneDust, ElectricDynamo, RedstoneDust],
 [Iron, Iron, Iron],
-[null, null, null]]);
+[]]);
