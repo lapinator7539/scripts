@@ -1,3 +1,17 @@
+// importing mod option
+import mods.nei.NEI;
+import mods.immersiveengineering.ArcFurnace;
+
+// importing stuff for latter use
+    //immersiveengineering
+var MetalBarrel = <ImmersiveEngineering:metalDevice2:7>;
+var WoodenBarrel = <ImmersiveEngineering:woodenDevice:6>;
+
+
+
+
+
+
 //Remove Metal Barrel as GT6 already has a barrel block.
 recipes.remove(<ImmersiveEngineering:metalDevice2:7>);
 
@@ -13,7 +27,7 @@ recipes.remove(<ImmersiveEngineering:metalDevice:9>);
 recipes.addShaped(<ImmersiveEngineering:metalDevice:9>, [[<ore:dustRedstone>, <gregtech:gt.multitileentity:10111>, <ore:dustRedstone>], [<ore:ingotAnyIron>, <ore:ingotAnyIron>, <ore:ingotAnyIron>],[]]);
 
 //remove netherbrick from arc furnace
-mods.immersiveengineering.ArcFurnace.removeRecipe(<minecraft:netherbrick:0>);
+ArcFurnace.removeRecipe(<minecraft:netherbrick:0>);
 
 
 // oven
