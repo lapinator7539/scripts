@@ -57,3 +57,8 @@ NEI.hide(Centrifuge);
 NEI.hide(Fermenter);
 NEI.hide(Squeezer);
 NEI.hide(Still);
+
+
+//testing stuff 
+
+mods.forestry.Fermenter.removeRecipe(<*>);

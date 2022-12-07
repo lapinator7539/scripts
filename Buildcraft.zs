@@ -1,6 +1,5 @@
 // importing mod option
 import mods.nei.NEI;
-import mods.buildcraft.Refinery;
 
 // importing stuff for latter use
 
@@ -40,7 +39,11 @@ NEI.hide(OilBucket);
 
 
 //recipes.remove(Fuel);
-//mods.buildcraft.Refinery.remove(<liquid:oil>);
+//var GtOil = <gregapi:gt.display.fluid:37>;
+
+//mods.buildcraft.Refinery.remove(<gregapi:gt.display.fluid:37>);
+//mods.buildcraft.Refinery.removeRecipe(<gregapi:gt.display.fluid:37>);
+//mods.buildcraft.Refinery.remove(<liquid:*>);
 //mods.buildcraft.Refinery.removeRecipe(<liquid:fuel>);
 //mods.buildcraft.Refinery.removeRecipe(FuelBucket);
 //mods.buildcraft.Refinery.remove(FuelBucket);
@@ -48,4 +51,5 @@ NEI.hide(OilBucket);
 //mods.buildcraft.Refinery.remove(<liquid:ethanol>);
 //mods.buildcraft.Refinery.removeRecipe(<liquid:ethanol>);
 //mods.buildcraft.Refinery.addRecipe(<liquid:fuel>, 100, 1, <liquid:ethanol>, <liquid:ethanol>);
-//mods.buildcraft.Refinery.removeRecipe(<liquid:fuel>, 160, 2, <liquid:oil>*2, <liquid:oil>*1);
+//mods.buildcraft.Refinery.removeRecipe(<liquid:fuel>, 120, 2, <liquid:oil>*1);
+//mods.buildcraft.Refinery.removeRecipe(<*>);
