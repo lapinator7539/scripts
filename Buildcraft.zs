@@ -1,6 +1,5 @@
 // importing mod option
 import mods.nei.NEI;
-//import mods.buildcraft.Refinery;
 
 // importing stuff for latter use
 
@@ -21,7 +20,6 @@ recipes.remove(CombutionEngine);
 
     //Remove refinery.  Duplicates GT6 machine functionality.
 recipes.remove(Refinery);
-
 
 
 //hide stuff from NEI
