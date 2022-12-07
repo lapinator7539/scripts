@@ -12,14 +12,11 @@ var Centrifuge = <Forestry:factory:2>;
 var Fermenter = <Forestry:factory:3>;
 var Squeezer = <Forestry:factory:5>;
 var Still = <Forestry:factory:6>;
-var ForestryBiomass = <Forestry:fluid.biomass>;
 var HoneyDew = <Forestry:honeydew>;
-var BioEthanol = <Forestry:fluid.bioethanol>;
 
     //ore dict
 var GenericComb = <ore:beeComb>;
 var GenericPropolis = <ore:listAllpropolis>;
-var GenericSapling = <ore:treeSapling>;
 var AllFruits = <ore:listAllfruit>;
 var AllWheats = <ore:listAllwheats>;
 var AllVeggies = <ore:listAllveggie>;
@@ -61,9 +58,6 @@ recipes.remove(Bottler);
     //Remove Centrifuge as this functionality is handled by GT machines.
 recipes.remove(Centrifuge);
 
-    //Remove Fermenter as this functionality is handled by GT machines.
-recipes.remove(Fermenter);
-
     //Remove Squeezer as this functionality is handled by GT machines.
 recipes.remove(Squeezer);
 
@@ -77,7 +71,6 @@ mods.forestry.Centrifuge.removeRecipe(GenericPropolis);
 
     //remove all fermenter recipe
 mods.forestry.Fermenter.removeRecipe(SugarCane);
-mods.forestry.Fermenter.removeRecipe(GenericSapling);
 mods.forestry.Fermenter.removeRecipe(AllFruits);
 mods.forestry.Fermenter.removeRecipe(AllWheats);
 mods.forestry.Fermenter.removeRecipe(AllVeggies);
@@ -106,8 +99,5 @@ NEI.hide(BioGasEngine);
 NEI.hide(BioGenerator);
 NEI.hide(Bottler);
 NEI.hide(Centrifuge);
-NEI.hide(Fermenter);
 NEI.hide(Squeezer);
 NEI.hide(Still);
-NEI.hide(ForestryBiomass);
-NEI.hide(BioEthanol);
