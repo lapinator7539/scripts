@@ -12,13 +12,28 @@ var Centrifuge = <Forestry:factory:2>;
 var Fermenter = <Forestry:factory:3>;
 var Squeezer = <Forestry:factory:5>;
 var Still = <Forestry:factory:6>;
+var ForestryHoney = <Forestry:fluid.honey>;
+var ForestryBiomass = <Forestry:fluid.biomass>;
 
     //ore dict
 var GenericComb = <ore:beeComb>;
 var GenericPropolis = <ore:listAllpropolis>;
+var GenericSapling = <ore:treeSapling>;
+var AllFruits = <ore:listAllfruit>;
+var AllWheats = <ore:listAllwheats>;
+var AllVeggies = <ore:listAllveggie>;
+var AllSpices = <ore:listAllspice>;
+var CurryLeaf = <ore:cropCurryleaf>;
+var Coconut = <ore:cropCoconut>;
+var Rice = <ore:cropRice>;
+var AllMushroom = <ore:listAllmushroom>;
 
     //computronic
 var ComputronicComb = <computronics:computronics.partsForestry>;
+
+    //minecraft
+var SugarCane = <minecraft:reeds>;
+var Fire = <minecraft:fire>;
 
 // remove recipe
     //Remove higher tier RF generation
@@ -61,4 +76,14 @@ NEI.hide(Still);
 
 //testing stuff 
 
-mods.forestry.Fermenter.removeRecipe(<*>);
+mods.forestry.Fermenter.removeRecipe(SugarCane);
+mods.forestry.Fermenter.removeRecipe(GenericSapling);
+mods.forestry.Fermenter.removeRecipe(AllFruits);
+mods.forestry.Fermenter.removeRecipe(AllWheats);
+mods.forestry.Fermenter.removeRecipe(AllVeggies);
+mods.forestry.Fermenter.removeRecipe(AllSpices);
+mods.forestry.Fermenter.removeRecipe(CurryLeaf);
+mods.forestry.Fermenter.removeRecipe(Coconut);
+mods.forestry.Fermenter.removeRecipe(Rice);
+mods.forestry.Fermenter.removeRecipe(AllMushroom);
+
