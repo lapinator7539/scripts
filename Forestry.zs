@@ -106,7 +106,6 @@ NEI.hide(BioGasEngine);
 NEI.hide(BioGenerator);
 NEI.hide(Bottler);
 NEI.hide(Centrifuge);
-NEI.hide(Fermenter);
 NEI.hide(Squeezer);
 NEI.hide(Still);
 NEI.hide(ForestryBiomass);
