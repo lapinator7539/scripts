@@ -77,7 +77,6 @@ mods.forestry.Centrifuge.removeRecipe(GenericPropolis);
 
     //remove all fermenter recipe
 mods.forestry.Fermenter.removeRecipe(SugarCane);
-mods.forestry.Fermenter.removeRecipe(GenericSapling);
 mods.forestry.Fermenter.removeRecipe(AllFruits);
 mods.forestry.Fermenter.removeRecipe(AllWheats);
 mods.forestry.Fermenter.removeRecipe(AllVeggies);

@@ -1,3 +1,6 @@
+// importing mod option
+import mods.nei.NEI;
+
 // importing stuff for latter use
 
     //gregtech
@@ -25,6 +28,7 @@ var CokeOvenBrick = <Railcraft:machine.alpha:7>;
 //removing recipes
 
     //Remove higher tier RF generation
+//need to hide them
 recipes.remove(SteamEngine);
 recipes.remove(CommercialSteamEngine);
 recipes.remove(IndustrailSteamEngine);
@@ -68,3 +72,10 @@ recipes.addShapeless(MinecartTank,[BronzeDrum, Minecart]);
 
     // reverse craft for the MinecartTank
 recipes.addShapeless(BronzeDrum,[MinecartTank.giveBack(Minecart * 1)]);
+
+
+//hidding stuff from NEI
+
+NEI.hide(SteamEngine);
+NEI.hide(CommercialSteamEngine);
+NEI.hide(IndustrailSteamEngine);
