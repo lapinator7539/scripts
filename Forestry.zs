@@ -19,7 +19,6 @@ var BioEthanol = <Forestry:fluid.bioethanol>;
     //ore dict
 var GenericComb = <ore:beeComb>;
 var GenericPropolis = <ore:listAllpropolis>;
-var GenericSapling = <ore:treeSapling>;
 var AllFruits = <ore:listAllfruit>;
 var AllWheats = <ore:listAllwheats>;
 var AllVeggies = <ore:listAllveggie>;
