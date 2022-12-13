@@ -1,5 +1,6 @@
 // importing mod option
 import mods.nei.NEI;
+import minetweaker.item.IItemStack;
 
 // importing stuff for latter use
 
@@ -53,7 +54,6 @@ var IngotDesh = <ore:ingotDesh>;
 var CompressedDesh = <ore:compressedDesh>;
 var FluidManipulator = <GalacticraftMars:item.null:6>;
 var OxygenFan = <GalacticraftCore:item.airFan>;
-//var AdvancedWafer = <GalacticraftCore:item.basicItem:14>;
 var SolarWafer = <GalacticraftCore:item.basicItem:12>;
 var SolarModule = <GalacticraftCore:item.basicItem>;
 var SolarPanel = <GalacticraftCore:item.basicItem:1>;
@@ -101,19 +101,27 @@ recipes.remove(OxygenBubbleDistributor);
 recipes.remove(OxygenCollector);
 recipes.remove(OxygenSealer);
 
+//testing stuff
+val RecipesToHide = [Refinery, CoalGenerator, CircuitFabricator, Compressor, ElectricCompressor, SolarWafer, SolarModule, SolarPanel, AdvancedSolarPanel, BasicSolarPanel] as IItemStack[];
+
+RecipesToHide += OxygenFan;
+
+for i in RecipesToHide{
+    NEI.hide(i);
+}
 
 //hide stuff from NEI
-NEI.hide(Refinery);
-NEI.hide(CoalGenerator);
-NEI.hide(CircuitFabricator);
-NEI.hide(Compressor);
-NEI.hide(ElectricCompressor);
-NEI.hide(SolarWafer);
-NEI.hide(SolarModule);
-NEI.hide(SolarPanel);
-NEI.hide(AdvancedSolarPanel);
-NEI.hide(BasicSolarPanel);
-NEI.hide(OxygenFan);
+//NEI.hide(Refinery);
+//NEI.hide(CoalGenerator);
+//NEI.hide(CircuitFabricator);
+//NEI.hide(Compressor);
+//NEI.hide(ElectricCompressor);
+//NEI.hide(SolarWafer);
+//NEI.hide(SolarModule);
+//NEI.hide(SolarPanel);
+//NEI.hide(AdvancedSolarPanel);
+//NEI.hide(BasicSolarPanel);
+//NEI.hide(OxygenFan);
 
 
 //adding recipes
