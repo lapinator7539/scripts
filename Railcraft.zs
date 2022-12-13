@@ -28,7 +28,6 @@ var CokeOvenBrick = <Railcraft:machine.alpha:7>;
 //removing recipes
 
     //Remove higher tier RF generation
-//need to hide them
 recipes.remove(SteamEngine);
 recipes.remove(CommercialSteamEngine);
 recipes.remove(IndustrailSteamEngine);

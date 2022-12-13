@@ -19,6 +19,7 @@ var TinRotor = <gregtech:gt.meta.rotor:500>;
 var AcidCell = <gregtech:gt.multiitem.technological:20001>;
 var BatteryAlloyPlateCurved = <ore:plateCurvedBatteryAlloy>;
 var TinWire = <ore:craftingWireTin>;
+var graphiterod = <ore:stickGraphite>;
 
     //galactic craft 
 var CoalGenerator = <GalacticraftCore:tile.machine>;
@@ -151,6 +152,11 @@ recipes.addShaped(EnergyStorageCluster,
 recipes.addShaped(ElectricArcFurnance,
 [[HeavyDutyPlate, HeavyDutyPlate, HeavyDutyPlate],
 [GraphiteElectrode,ElectricFurnance, GraphiteElectrode],
+[MeteoriticIronIgot, T6Circuit, MeteoriticIronIgot]]);
+
+recipes.addShaped(ElectricArcFurnance,
+[[HeavyDutyPlate, HeavyDutyPlate, HeavyDutyPlate],
+[graphiterod,ElectricFurnance, graphiterod],
 [MeteoriticIronIgot, T6Circuit, MeteoriticIronIgot]]);
 
     //SpinTHruster recipes
