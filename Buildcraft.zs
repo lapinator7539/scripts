@@ -13,14 +13,12 @@ var OilBucket = <BuildCraft|Energy:bucketOil>;
 var Oil = <BuildCraft|Energy:blockOil>;
 
 // removing recipes
-
     //Remove higher tier RF generation
 recipes.remove(StirlingEngine);
 recipes.remove(CombutionEngine);
 
     //Remove refinery.  Duplicates GT6 machine functionality.
 recipes.remove(Refinery);
-
 
 //hide stuff from NEI
 NEI.hide(Refinery);
@@ -29,3 +27,7 @@ NEI.hide(CombutionEngine);
 NEI.hide(StirlingEngine);
 NEI.hide(FuelBucket);
 NEI.hide(OilBucket);
+
+//testing stuff
+
+mods.buildcraft.Refinery.removeRecipe(<liquid:fuel>);

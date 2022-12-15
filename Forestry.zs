@@ -102,3 +102,7 @@ mods.forestry.Squeezer.removeRecipe(<liquid:juice>);
 //hide stuff from NEI
 for rh in RecipesToHide{
     NEI.hide(rh);}
+
+//testing stuff
+
+//mods.forestry.Bottler.removeRecipe(<liquid:fuel);

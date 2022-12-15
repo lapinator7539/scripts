@@ -26,14 +26,18 @@ var ElectricDynamo = <gregtech:gt.multitileentity:10111>;
 
 // list for latter use
     //list of recipe to remove
-val RecipesToRemove = [MetalBarrel, WoodenBarrel, CokeOven, netherbrick, ThermoelectricGenerator, KineticDynamo] as IItemStack[];
+val RecipesToRemove = [MetalBarrel, WoodenBarrel, CokeOven, ThermoelectricGenerator, KineticDynamo] as IItemStack[];
 
     //list of recipe to hide
 val RecipesToHide = [MetalBarrel, WoodenBarrel, CokeOven] as IItemStack[];
 
 //removing recipes
+    //crafting table
 for rr in RecipesToRemove{
     recipes.remove(rr);}
+
+    //arc furnance
+ArcFurnace.removeRecipe(netherbrick);
 
 //hide stuff from NEI
 for rh in RecipesToHide{
