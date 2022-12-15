@@ -1,5 +1,6 @@
 // importing mod option
 import mods.nei.NEI;
+import minetweaker.item.IItemStack;
 
 // importing stuff for latter use
     //forestry
@@ -36,6 +37,7 @@ var TeaCup = <ore:foodTea>;
 var CofeeCup = <ore:foodCoffee>;
 var AllNuts = <ore:listAllnut>;
 var Durian = <ore:cropDurian>;
+var AllSeed = <ore:listAllseed>;
 
     //IC2
 var PlantBall = <IC2:itemFuelPlantBall>;
@@ -47,27 +49,17 @@ var ComputronicComb = <computronics:computronics.partsForestry>;
 var SugarCane = <minecraft:reeds>;
 var Cactus = <minecraft:cactus>;
 
+// list for latter use
+    //list of recipe to remove
+val RecipesToRemove = [PeatFiredEngine, BioGasEngine, BioGenerator, ClockWorjEngine, Bottler, Centrifuge, Fermenter, Squeezer, Still] as IItemStack[];
+
+    //list of recipe to hide
+val RecipesToHide = [PeatFiredEngine, BioGasEngine, BioGenerator, Bottler, Centrifuge, Squeezer, Still, ForestryBiomass, BioEthanol] as IItemStack[];
+
 // remove recipe
-    //Remove higher tier RF generation
-recipes.remove(PeatFiredEngine);
-recipes.remove(BioGasEngine);
-recipes.remove(BioGenerator);
-recipes.remove(ClockWorjEngine);
-
-    //Remove Bottler as this functionality is handled by GT machines.
-recipes.remove(Bottler);
-
-    //Remove Centrifuge as this functionality is handled by GT machines.
-recipes.remove(Centrifuge);
-
-    //Remove Fermenter as this functionality is handled by GT machines.
-recipes.remove(Fermenter);
-
-    //Remove Squeezer as this functionality is handled by GT machines.
-recipes.remove(Squeezer);
-
-    //Remove Still as this functionality is handled by GT machines.
-recipes.remove(Still);
+    //remove crafting recipe
+for rr in RecipesToRemove{
+    recipes.remove(rr);}
 
     //remove all Centrifuge recipes 
 mods.forestry.Centrifuge.removeRecipe(GenericComb);
@@ -97,14 +89,16 @@ mods.forestry.Fermenter.removeRecipe(AllNuts);
 mods.forestry.Fermenter.removeRecipe(Durian);
 mods.forestry.Fermenter.removeRecipe(HoneyDew);
 
+    //remove all still recipe
+mods.forestry.Still.removeRecipe(<liquid:bioethanol>, <liquid:biomass>);
+mods.forestry.Still.removeRecipe(<liquid:turpentine>, <liquid:resin>);
+mods.forestry.Still.removeRecipe(<liquid:mead>);
 
-//hide stuff from nei
-NEI.hide(PeatFiredEngine);
-NEI.hide(BioGasEngine);
-NEI.hide(BioGenerator);
-NEI.hide(Bottler);
-NEI.hide(Centrifuge);
-NEI.hide(Squeezer);
-NEI.hide(Still);
-NEI.hide(ForestryBiomass);
-NEI.hide(BioEthanol);
+    //remove all squeezer recipe
+mods.forestry.Squeezer.removeRecipe(<liquid:seedoil>);
+mods.forestry.Squeezer.removeRecipe(<liquid:juice>);
+//mods.forestry.Squeezer.removeRecipe(<liquid:Honey>);
+
+//hide stuff from NEI
+for rh in RecipesToHide{
+    NEI.hide(rh);}

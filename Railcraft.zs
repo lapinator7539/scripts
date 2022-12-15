@@ -1,14 +1,12 @@
 // importing mod option
 import mods.nei.NEI;
+import minetweaker.item.IItemStack;
 
 // importing stuff for latter use
-
     //gregtech
-
 var BronzeDrum = <gregtech:gt.multitileentity:32102>;
 
     //minecraft
-
 var Minecart = <minecraft:minecart>;
 
     //Railcraft
@@ -22,35 +20,27 @@ var IronTankValve = <Railcraft:machine.beta:2>;
 var SteelTankWall = <Railcraft:machine.beta:13>;
 var SteelTankGauge = <Railcraft:machine.beta:14>;
 var SteelTankValve = <Railcraft:machine.beta:15>;
-var CokeOvenBrick = <Railcraft:machine.alpha:7>; 
+var CokeOvenBrick = <Railcraft:machine.alpha:7>;
 
+// list for latter use
+    //list of recipe to hide
+val RecipesToHide = [SteamEngine, CommercialSteamEngine, IndustrailSteamEngine, CokeOvenBrick] as IItemStack[];
+
+    //list of recipe to remove
+val RecipesToRemove = [SteamEngine, CommercialSteamEngine, IndustrailSteamEngine, IronTankWall, IronTankGauge, IronTankValve, SteelTankWall, SteelTankGauge, SteelTankValve,
+CokeOvenBrick, MinecartTank] as IItemStack[];
+
+//hide stuff from NEI
+for rh in RecipesToHide{
+    NEI.hide(rh);}
 
 //removing recipes
+for rr in RecipesToRemove{
+    recipes.remove(rr);}
 
-    //Remove higher tier RF generation
-recipes.remove(SteamEngine);
-recipes.remove(CommercialSteamEngine);
-recipes.remove(IndustrailSteamEngine);
-
-
-    //Removed Railcraft tanks as they will cause world corruption due to a unfixed Railcraft bug when used in conjunction with GT6.
-        //Iron Tank
-recipes.remove(IronTankWall);
-recipes.remove(IronTankGauge);
-recipes.remove(IronTankValve);
-
-        //Steel Tank
-recipes.remove(SteelTankWall);
-recipes.remove(SteelTankGauge);
-recipes.remove(SteelTankValve);
-
-recipes.remove(CokeOvenBrick);
 recipes.removeShapeless(Minecart, [MinecartTank]);
-recipes.remove(MinecartTank);
-
 
 // add recipes for the crafting table
-
     // MinecartTank
 recipes.addShaped(MinecartTank,
 [[BronzeDrum, null, null],
@@ -63,18 +53,9 @@ recipes.addShaped(BronzeDrum,
 [null, null, null],
 [null, null, null]]);
 
-
 // add recipes for the crafting inventory slot
-
     // MinecartTank
 recipes.addShapeless(MinecartTank,[BronzeDrum, Minecart]);
 
     // reverse craft for the MinecartTank
 recipes.addShapeless(BronzeDrum,[MinecartTank.giveBack(Minecart * 1)]);
-
-
-//hidding stuff from NEI
-
-NEI.hide(SteamEngine);
-NEI.hide(CommercialSteamEngine);
-NEI.hide(IndustrailSteamEngine);

@@ -3,7 +3,6 @@ import mods.nei.NEI;
 import minetweaker.item.IItemStack;
 
 // importing stuff for latter use
-
     //minecraft
 var furnance = <minecraft:furnace>;
 var glass = <minecraft:glass>;
@@ -68,64 +67,30 @@ var OxygenBubbleDistributor = <GalacticraftCore:tile.distributor>;
 var OxygenCollector = <GalacticraftCore:tile.oxygenCollector>;
 var OxygenSealer = <GalacticraftCore:tile.sealer>;
 var CompressIron = <ore:compressedIron>;
+var CommunicationDish = <GalacticraftCore:tile.dish>;
 
     //ImmersiveEngineering
-
 var GraphiteElectrode = <ImmersiveEngineering:graphiteElectrode>;
 
+// list for latter use
+    //list of recipe to hide
+val RecipesToHide = [Refinery, OxygenFan, CoalGenerator, CircuitFabricator, Compressor, ElectricCompressor, 
+SolarWafer, SolarModule, SolarPanel, AdvancedSolarPanel, BasicSolarPanel, CommunicationDish] as IItemStack[];
+
+    //list of recipe to remove
+val RecipesToRemove = [CoalGenerator, Refinery, NASAWorkbench, FuelLoader, CircuitFabricator, Compressor, ElectricCompressor, AirLockController, ElectricFurnance,
+EnergyStorageCluster, ElectricArcFurnance, SpinTHruster, DisplayScreen, FrequencyModule, TelemetryUnit, LaunchController, FluidManipulator, OxygenFan,
+battery, AirVent, OxygenDeCompressor, OxygenDetector, OxygenBubbleDistributor, OxygenCollector, OxygenSealer] as IItemStack[];
+
 //removing recipes
+for rr in RecipesToRemove{
+    recipes.remove(rr);}
 
-recipes.remove(CoalGenerator);
-recipes.remove(Refinery);
-recipes.remove(NASAWorkbench);
-recipes.remove(FuelLoader);
-recipes.remove(CircuitFabricator);
-recipes.remove(Compressor);
-recipes.remove(ElectricCompressor);
-recipes.remove(AirLockController);
-recipes.remove(ElectricFurnance);
-recipes.remove(EnergyStorageCluster);
-recipes.remove(ElectricArcFurnance);
-recipes.remove(SpinTHruster);
-recipes.remove(DisplayScreen);
-recipes.remove(FrequencyModule);
-recipes.remove(TelemetryUnit);
-recipes.remove(LaunchController);
-recipes.remove(FluidManipulator);
-recipes.remove(OxygenFan);
-recipes.remove(battery);
-recipes.remove(AirVent);
-recipes.remove(OxygenDeCompressor);
-recipes.remove(OxygenDetector);
-recipes.remove(OxygenBubbleDistributor);
-recipes.remove(OxygenCollector);
-recipes.remove(OxygenSealer);
-
-//testing stuff
-val RecipesToHide = [Refinery, CoalGenerator, CircuitFabricator, Compressor, ElectricCompressor, SolarWafer, SolarModule, SolarPanel, AdvancedSolarPanel, BasicSolarPanel] as IItemStack[];
-
-RecipesToHide += OxygenFan;
-
-for i in RecipesToHide{
-    NEI.hide(i);
-}
-
-//hide stuff from NEI
-//NEI.hide(Refinery);
-//NEI.hide(CoalGenerator);
-//NEI.hide(CircuitFabricator);
-//NEI.hide(Compressor);
-//NEI.hide(ElectricCompressor);
-//NEI.hide(SolarWafer);
-//NEI.hide(SolarModule);
-//NEI.hide(SolarPanel);
-//NEI.hide(AdvancedSolarPanel);
-//NEI.hide(BasicSolarPanel);
-//NEI.hide(OxygenFan);
-
+//hide recipe from NEI
+for rh in RecipesToHide{
+    NEI.hide(rh);}
 
 //adding recipes
-
     //NASA workbench recipe
 recipes.addShaped(NASAWorkbench, 
 [[CompressedSteel, RobotArmMV, CompressedSteel],

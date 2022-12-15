@@ -1,6 +1,7 @@
 // importing mod option
 import mods.nei.NEI;
 import mods.immersiveengineering.ArcFurnace;
+import minetweaker.item.IItemStack;
 
 // importing stuff for latter use
 
@@ -23,29 +24,22 @@ var Iron = <ore:ingotAnyIronOrSteel>;
     //gregtech 6 
 var ElectricDynamo = <gregtech:gt.multitileentity:10111>;
 
-//removeRecipe
+// list for latter use
+    //list of recipe to remove
+val RecipesToRemove = [MetalBarrel, WoodenBarrel, CokeOven, netherbrick, ThermoelectricGenerator, KineticDynamo] as IItemStack[];
 
-    //Remove Metal Barrel as GT6 already has a barrel block.
-recipes.remove(MetalBarrel);
+    //list of recipe to hide
+val RecipesToHide = [MetalBarrel, WoodenBarrel, CokeOven] as IItemStack[];
 
-    //Remove Wooden Barrel as GT6 already has a barrel block.
-recipes.remove(WoodenBarrel);
+//removing recipes
+for rr in RecipesToRemove{
+    recipes.remove(rr);}
 
-    //Coke oven
-recipes.remove(CokeOven);
-
-    //remove netherbrick from arc furnace
-ArcFurnace.removeRecipe(netherbrick);
-
-    //remove ThermoelectricGenerator
-recipes.remove(ThermoelectricGenerator);
-
-    //remove KineticDynamo
-recipes.remove(KineticDynamo);
-
+//hide stuff from NEI
+for rh in RecipesToHide{
+    NEI.hide(rh);}
 
 //add recipes
-
     //Change Thermoelectric Generator to use GT6 materials.
 recipes.addShaped(ThermoelectricGenerator,
 [[IronSteel, IronSteel, IronSteel],
