@@ -30,4 +30,4 @@ NEI.hide(OilBucket);
 
 //testing stuff
 
-mods.buildcraft.Refinery.removeRecipe(<liquid:fuel>);
+//mods.buildcraft.Refinery.removeRecipe(<liquid:fuel>);
