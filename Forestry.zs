@@ -51,10 +51,10 @@ var Cactus = <minecraft:cactus>;
 
 // list for latter use
     //list of recipe to remove
-val RecipesToRemove = [PeatFiredEngine, BioGasEngine, BioGenerator, ClockWorjEngine, Bottler, Centrifuge, Fermenter, Squeezer, Still] as IItemStack[];
+val RecipesToRemove = [PeatFiredEngine, BioGasEngine, BioGenerator, ClockWorjEngine, Bottler, Centrifuge, Squeezer, Still] as IItemStack[];
 
     //list of recipe to hide
-val RecipesToHide = [PeatFiredEngine, BioGasEngine, BioGenerator, Bottler, Centrifuge, Squeezer, Still, ForestryBiomass, BioEthanol] as IItemStack[];
+val RecipesToHide = [PeatFiredEngine, BioGasEngine, BioGenerator, Bottler, Centrifuge, Squeezer, Still, ForestryBiomass, BioEthanol, ClockWorjEngine] as IItemStack[];
 
 // remove recipe
     //remove crafting recipe
