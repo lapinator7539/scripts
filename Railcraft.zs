@@ -24,6 +24,13 @@ var SteelTankGauge = <Railcraft:machine.beta:14>;
 var SteelTankValve = <Railcraft:machine.beta:15>;
 var CokeOvenBrick = <Railcraft:machine.alpha:7>; 
 
+    //generic ore dict
+
+var AnyIronOrSteelPlate = <ore:plateAnyIronOrSteel>;
+var AnyIronOrSteelWheels = <ore:minecartWheelsAnyIronOrSteel>;
+var AllHammer = <ore:craftingToolHardHammer>;
+var AllWrench = <ore:craftingToolWrench>;
+
 
 //removing recipes
 
@@ -50,6 +57,12 @@ recipes.remove(MinecartTank);
 
 
 // add recipes for the crafting table
+
+    //adding back the recipe for the minecart
+recipes.addShaped(Minecart,
+[[null, AllHammer.reuse(), null],
+[AnyIronOrSteelPlate, AllWrench.reuse(), AnyIronOrSteelPlate],
+[AnyIronOrSteelWheels, AnyIronOrSteelPlate, AnyIronOrSteelWheels]]);
 
     // MinecartTank
 recipes.addShaped(MinecartTank,
